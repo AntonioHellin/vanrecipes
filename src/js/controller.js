@@ -12,10 +12,6 @@ import 'regenerator-runtime/runtime';
 import recipeView from './views/recipeView.js';
 import { async } from 'regenerator-runtime';
 
-if (module.hot) {
-  module.hot.accept();
-}
-
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -96,9 +92,9 @@ const controlAddRecipe = async function (newRecipe) {
   try {
     // Show spinner
     addRecipeView.renderSpinner();
+
     // Upload new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
@@ -122,6 +118,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to the first version of VanRecipes!');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -130,5 +130,6 @@ const init = function () {
   searchView.addHandleSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
