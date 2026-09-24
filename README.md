@@ -1,10 +1,10 @@
-# recipe-finder-app
+# vanrecipes
 
 A modern vanilla JavaScript recipe discovery and bookmarking application featuring custom recipe creation, serving adjustments, and real-time search.
 
 ## Project Overview
 
-`recipe-finder-app` is built using ES6+ JavaScript following the Model-View-Controller (MVC) architectural pattern, bundled with Parcel. It connects to the Forkify Recipe API to search across thousands of recipes, adjust ingredient quantities dynamically based on guest servings, and store bookmarked recipes in browser local storage.
+`vanrecipes` is built using ES6+ JavaScript following the Model-View-Controller (MVC) architectural pattern, bundled with Parcel. It connects to the Forkify Recipe API to search across thousands of recipes, adjust ingredient quantities dynamically based on guest servings, and store bookmarked recipes in browser local storage.
 
 ## Features
 
